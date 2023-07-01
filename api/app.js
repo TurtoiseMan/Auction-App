@@ -9,6 +9,7 @@ const {
   updateAuctionItem,
   deleteAuctionItem,
 } = require("./controllers");
+const { sequelize } = require("./db");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -25,6 +26,8 @@ app.post("/auction-items", createAuctionItem);
 app.get("/auction-items/:itemId", getAuctionItem);
 app.put("/auction-items/:itemId", updateAuctionItem);
 app.delete("/auction-items/:itemId", deleteAuctionItem);
+
+sequelize.sync();
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
