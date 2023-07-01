@@ -3,7 +3,7 @@ function handleFormSubmit(event) {
 
   const itemName = document.getElementById("item-name").value;
   const startingBid = document.getElementById("item-bid").value;
-  const itemDuration = document.getElementById("item-duration").value;
+  const remainingTime = document.getElementById("item-duration").value;
   const itemDescription = document.getElementById("item-description").value;
   const itemImageUrl = document.getElementById("item-image").value;
   const currentBid = startingBid;
@@ -11,7 +11,7 @@ function handleFormSubmit(event) {
     itemName,
     startingBid,
     currentBid,
-    itemDuration,
+    remainingTime,
     itemDescription,
     itemImageUrl,
   };
@@ -43,7 +43,6 @@ const itemId = urlParams.get("id");
 fetch(`http://localhost:3000/auction-items/${itemId}`)
   .then((response) => response.json())
   .then((item) => {
-
     document.getElementById("item-name").value = item.itemName;
     document.getElementById("item-bid").value = item.startingBid;
     document.getElementById("item-duration").value = item.remainingTime;
