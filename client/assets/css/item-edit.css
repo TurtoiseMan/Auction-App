@@ -1,3 +1,13 @@
+.item-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-edit-div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
 input[type="text"],
 input[type="number"],
 input[type="url"],
@@ -12,7 +22,6 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-
 input[type="submit"] {
   background-color: #04aa6d;
   color: white;
@@ -30,4 +39,9 @@ input[type="submit"]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+@media (max-width: 768px) {
+  .item-edit-div {
+    width: 80%;
+  }
 }
