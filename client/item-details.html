@@ -3,35 +3,48 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="assets/css/item-details.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
     <title>Auction Item Details</title>
   </head>
-  <body
-    style="
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-    "
-  >
-    <div id="item-details">
-      <img id="item-image" src="#" alt="Item Image" class="item-image" />
-      <h2 id="item-name" class="item-name"></h2>
-      <p id="item-description" class="item-description"></p>
-      <div id="item-texts">
-        <p id="item-starting-bid" class="item-bid"></p>
-        <p id="item-bid" class="item-bid"></p>
-        <p id="item-time" class="item-time"></p>
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo"><a href="index.html">Auction App</a></div>
+        <div class="hamburger">
+          <button class="hamburger-menu">
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+          </button>
+        </div>
       </div>
-      <div>
-        <button id="edit-button">Edit</button>
-        <button id="delete-button">Delete</button>
+      <div class="drop-down">
+        <a href="index.html">Home</a>
+        <a href="add-item.html">Add Item</a>
+      </div>
+    </header>
+    <div id="item-details-container">
+      <h1>Item Details</h1>
+      <div id="item-details">
+        <img id="item-image" src="#" alt="Item Image" class="item-image" />
+        <h2 id="item-name" class="item-name"></h2>
+        <p id="item-description" class="item-description"></p>
+        <div id="item-texts">
+          <p id="item-starting-bid" class="item-bid"></p>
+          <p id="item-bid" class="item-bid"></p>
+          <p id="item-time" class="item-time"></p>
+        </div>
+        <div>
+          <button id="edit-button">Edit</button>
+          <button id="delete-button">Delete</button>
+        </div>
       </div>
     </div>
-
     <script src="assets/js/itemDetails.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </body>
 </html>

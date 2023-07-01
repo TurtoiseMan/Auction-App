@@ -5,56 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/add-item.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
     <title>Document</title>
   </head>
-  <body class="add-item">
-    <h1>Add Item</h1>
-    <div class="add-item-div">
-      <form class="add-item-form">
-        <label for="item-name">Item Name:</label>
-        <input
-          type="text"
-          id="item-name"
-          name="item-name"
-          required
-        /><br /><br />
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo"><a href="index.html">Auction App</a></div>
+        <div class="hamburger">
+          <button class="hamburger-menu">
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="drop-down">
+        <a href="index.html">Home</a>
+        <a href="add-item.html">Add Item</a>
+      </div>
+    </header>
+    <div class="add-item">
+      <h1>Add Item</h1>
+      <div class="add-item-div">
+        <form class="add-item-form">
+          <label for="item-name">Item Name:</label>
+          <input
+            type="text"
+            id="item-name"
+            name="item-name"
+            required
+          /><br /><br />
 
-        <label for="item-bid">Starting Bid:</label>
-        <input
-          type="number"
-          id="item-bid"
-          name="item-bid"
-          required
-        /><br /><br />
+          <label for="item-bid">Starting Bid:</label>
+          <input
+            type="number"
+            id="item-bid"
+            name="item-bid"
+            required
+          /><br /><br />
 
-        <label for="item-duration">Duration (in hours):</label>
-        <input
-          type="number"
-          id="item-duration"
-          name="item-duration"
-          required
-        /><br /><br />
+          <label for="item-duration">Duration (in hours):</label>
+          <input
+            type="number"
+            id="item-duration"
+            name="item-duration"
+            required
+          /><br /><br />
 
-        <label for="item-description">Description:</label><br />
-        <textarea
-          id="item-description"
-          name="item-description"
-          rows="4"
-          required
-        ></textarea
-        ><br /><br />
+          <label for="item-description">Description:</label><br />
+          <textarea
+            id="item-description"
+            name="item-description"
+            rows="4"
+            required
+          ></textarea
+          ><br /><br />
 
-        <label for="item-image">Image:</label>
-        <input type="url" id="item-image" name="item-image" /><br /><br />
+          <label for="item-image">Image:</label>
+          <input type="url" id="item-image" name="item-image" /><br /><br />
 
-        <input type="submit" id="item-submit-button" value="Submit" />
-      </form>
+          <input type="submit" id="item-submit-button" value="Submit" />
+        </form>
+      </div>
     </div>
 
     <script src="assets/js/addItem.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </body>
 </html>
