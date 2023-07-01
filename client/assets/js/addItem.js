@@ -1,3 +1,5 @@
+import { BASE_URL } from "./config";
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("item-submit-button");
   form.addEventListener("click", addItem);
@@ -20,7 +22,7 @@ function addItem(event) {
     remainingTime: itemDuration,
   };
   console.log(newItem);
-  fetch("http://localhost:3000/auction-items/", {
+  fetch(`${BASE_URL}/auction-items/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -1,16 +1,17 @@
+import { BASE_URL } from "./config";
+
 function handleItemClick(event) {
   const itemCard = event.currentTarget;
 
   const itemId = itemCard.dataset.itemId;
 
   window.location.href = `item-details.html?id=${itemId}`;
-
 }
 
 function createItemCard(item) {
   const itemCard = document.createElement("div");
   itemCard.classList.add("item-card");
-  itemCard.dataset.itemId = item.itemId; 
+  itemCard.dataset.itemId = item.itemId;
   const itemImage = document.createElement("img");
   itemImage.src = item.itemImageUrl;
   itemImage.alt = "Item Image";
@@ -47,10 +48,9 @@ function createItemCard(item) {
   return itemCard;
 }
 
-
 const itemContainer = document.getElementById("item-container");
 
-fetch("http://localhost:3000/auction-items/")
+fetch(`${BASE_URL}/auction-items/`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);

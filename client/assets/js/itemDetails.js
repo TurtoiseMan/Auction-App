@@ -1,7 +1,9 @@
+import { BASE_URL } from "./config";
+
 const urlParams = new URLSearchParams(window.location.search);
 const itemId = urlParams.get("id");
 
-fetch(`http://localhost:3000/auction-items/${itemId}`)
+fetch(`${BASE_URL}/auction-items/${itemId}`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -32,5 +34,3 @@ fetch(`http://localhost:3000/auction-items/${itemId}`)
   .catch((error) => {
     console.error("Error:", error);
   });
-
-
