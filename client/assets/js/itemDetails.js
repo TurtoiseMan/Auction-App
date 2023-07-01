@@ -25,6 +25,11 @@ fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`)
       editButton.addEventListener("click", function () {
         window.location.href = `item-edit.html?id=${itemId}`;
       });
+
+      const deleteButton = document.getElementById("delete-button");
+      deleteButton.addEventListener("click", function () {
+        deleteItem(itemId);
+      });
     } else {
       console.error("Item not found!");
     }
@@ -32,3 +37,20 @@ fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`)
   .catch((error) => {
     console.error("Error:", error);
   });
+
+function deleteItem(itemId) {
+  fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`, {
+    method: "DELETE",
+  })
+    .then((response) => {
+      if (response.ok) {
+        console.log("Item deleted successfully");
+        window.location.href = `index.html`;
+      } else {
+        console.error("Failed to delete item");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}

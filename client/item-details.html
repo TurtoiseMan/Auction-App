@@ -2,18 +2,12 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="assets/css/item-details.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <title>Auction Item Details</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/item-details.css" />
   </head>
   <body
     style="
@@ -32,7 +26,10 @@
         <p id="item-bid" class="item-bid"></p>
         <p id="item-time" class="item-time"></p>
       </div>
-      <button id="edit-button">Edit</button>
+      <div>
+        <button id="edit-button">Edit</button>
+        <button id="delete-button">Delete</button>
+      </div>
     </div>
 
     <script src="assets/js/itemDetails.js"></script>
