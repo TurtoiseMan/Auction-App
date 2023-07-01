@@ -51,7 +51,7 @@ const itemContainer = document.getElementById("item-container");
 fetch(`https://auction-app-cew6.onrender.com/auction-items/`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     data.forEach((item) => {
       const itemCard = createItemCard(item);
       itemContainer.appendChild(itemCard);

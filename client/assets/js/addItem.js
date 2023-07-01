@@ -19,7 +19,7 @@ function addItem(event) {
     currentBid: itemBid,
     remainingTime: itemDuration,
   };
-  console.log(newItem);
+  // console.log(newItem);
   fetch(`https://auction-app-cew6.onrender.com/auction-items/`, {
     method: "POST",
     headers: {

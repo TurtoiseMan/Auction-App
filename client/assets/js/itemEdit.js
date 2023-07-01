@@ -16,7 +16,7 @@ function handleFormSubmit(event) {
     itemImageUrl,
   };
 
-  console.log(editedItem);
+  // console.log(editedItem);
 
   fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`, {
     method: "PUT",

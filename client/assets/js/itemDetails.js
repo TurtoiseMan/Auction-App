@@ -4,7 +4,7 @@ const itemId = urlParams.get("id");
 fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     const item = data;
 
     if (item) {
