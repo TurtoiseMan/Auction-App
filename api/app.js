@@ -11,7 +11,7 @@ const {
 } = require("./controllers");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
@@ -27,5 +27,5 @@ app.put("/auction-items/:itemId", updateAuctionItem);
 app.delete("/auction-items/:itemId", deleteAuctionItem);
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on ${port}`);
 });
