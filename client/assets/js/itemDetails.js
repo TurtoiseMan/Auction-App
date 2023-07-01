@@ -1,9 +1,7 @@
-import { BASE_URL } from "./config";
-
 const urlParams = new URLSearchParams(window.location.search);
 const itemId = urlParams.get("id");
 
-fetch(`${BASE_URL}/auction-items/${itemId}`)
+fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);

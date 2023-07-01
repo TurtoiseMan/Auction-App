@@ -1,5 +1,3 @@
-import { BASE_URL } from "./config";
-
 function handleFormSubmit(event) {
   event.preventDefault();
 
@@ -20,7 +18,7 @@ function handleFormSubmit(event) {
 
   console.log(editedItem);
 
-  fetch(`${BASE_URL}/auction-items/${itemId}`, {
+  fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -42,7 +40,7 @@ function handleFormSubmit(event) {
 const urlParams = new URLSearchParams(window.location.search);
 const itemId = urlParams.get("id");
 
-fetch(`${BASE_URL}/auction-items/${itemId}`)
+fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`)
   .then((response) => response.json())
   .then((item) => {
     document.getElementById("item-name").value = item.itemName;

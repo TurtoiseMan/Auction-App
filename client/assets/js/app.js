@@ -1,5 +1,3 @@
-import { BASE_URL } from "./config";
-
 function handleItemClick(event) {
   const itemCard = event.currentTarget;
 
@@ -50,7 +48,7 @@ function createItemCard(item) {
 
 const itemContainer = document.getElementById("item-container");
 
-fetch(`${BASE_URL}/auction-items/`)
+fetch(`https://auction-app-cew6.onrender.com/auction-items/`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
