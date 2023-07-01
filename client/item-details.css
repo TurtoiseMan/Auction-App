@@ -1,0 +1,42 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+#item-details {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  justify-content: space-evenly;
+  align-items: center;
+  outline: 1px solid black;
+  border-radius: 8px;
+}
+#item-texts {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-left: 36px;
+}
+#item-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+#edit-button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+#edit-button:hover {
+  background-color: #45a049;
+}

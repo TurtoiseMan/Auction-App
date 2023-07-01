@@ -1,0 +1,3 @@
+- short description of what it does
+- how to use it (install dep, seed, run docker image/global postgres, application start)
+- brief overview of the architecture
