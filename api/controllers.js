@@ -142,9 +142,9 @@ async function deleteAuctionItem(req, res) {
 async function handleBid(req, res) {
   try {
     const itemId = req.params.itemId;
-    const { currentBid } = req.body;
+    const { bidAmount } = req.body;
 
-    if (!currentBid) {
+    if (!bidAmount) {
       return res.status(400).json({ error: "Missing bid amount" });
     }
 
@@ -153,8 +153,8 @@ async function handleBid(req, res) {
       return res.status(404).json({ error: "Item not found" });
     }
 
-    if (currentBid > item.currentBid) {
-      item.currentBid = currentBid;
+    if (bidAmount > item.currentBid) {
+      item.currentBid = bidAmount;
       await item.save();
 
       res.sendStatus(200);
