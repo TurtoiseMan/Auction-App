@@ -36,29 +36,48 @@
   border-radius: 8px;
   object-fit: contain;
 }
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 #edit-button {
   background-color: #04aa6d;
   color: white;
   padding: 12px 20px;
-  margin-right: 56px;
+  margin-inline: 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 #delete-button {
-  background-color: rgb(184, 17, 59);
+  background-color: rgb(117, 0, 29);
   color: white;
   padding: 12px 20px;
+  margin-inline: 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  align-self: flex-end;
+  /* align-self: flex-end; */
+}
+#bid-button {
+  background-color: rgb(13, 146, 208);
+  color: white;
+  padding: 12px 20px;
+  margin-inline: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* align-self: flex-end; */
 }
 
 #edit-button:hover {
-  background-color: #46a04a;
+  background-color: #45a24a;
 }
 #delete-button:hover {
-  background-color: rgb(117, 0, 29);
+  background-color: rgb(184, 17, 59);
+}
+#bid-button:hover {
+  background-color: rgb(45, 153, 203);
 }

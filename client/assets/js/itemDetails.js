@@ -26,6 +26,11 @@ fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`)
         window.location.href = `item-edit.html?id=${itemId}`;
       });
 
+      const bidButton = document.getElementById("bid-button");
+      bidButton.addEventListener("click", function () {
+        window.location.href = `item-bid.html?id=${itemId}`;
+      });
+
       const deleteButton = document.getElementById("delete-button");
       deleteButton.addEventListener("click", function () {
         deleteItem(itemId);
