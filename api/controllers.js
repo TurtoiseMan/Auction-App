@@ -72,7 +72,7 @@ async function updateAuctionItem(req, res) {
       itemDescription,
       itemImageUrl,
       startingBid,
-      currentBid,
+      // currentBid,
       remainingTime,
     } = req.body;
 
@@ -86,7 +86,6 @@ async function updateAuctionItem(req, res) {
       !itemDescription &&
       !itemImageUrl &&
       !startingBid &&
-      !currentBid &&
       !remainingTime
     ) {
       return res
@@ -106,9 +105,9 @@ async function updateAuctionItem(req, res) {
     if (startingBid) {
       item.startingBid = startingBid;
     }
-    if (currentBid) {
-      item.currentBid = currentBid;
-    }
+    // if (currentBid) {
+    //   item.currentBid = currentBid;
+    // }
     if (remainingTime) {
       item.remainingTime = remainingTime;
     }
@@ -140,10 +139,41 @@ async function deleteAuctionItem(req, res) {
   }
 }
 
+async function handleBid(req, res) {
+  try {
+    const itemId = req.params.itemId;
+    const { bidAmount } = req.body;
+
+    if (!bidAmount) {
+      return res.status(400).json({ error: "Missing bid amount" });
+    }
+
+    const item = await Item.findByPk(itemId);
+    if (!item) {
+      return res.status(404).json({ error: "Item not found" });
+    }
+
+    if (bidAmount > item.currentBid) {
+      item.currentBid = bidAmount;
+      await item.save();
+
+      res.sendStatus(200);
+    } else {
+      res
+        .status(400)
+        .json({ error: "Bid amount should be higher than the current bid" });
+    }
+  } catch (error) {
+    console.error("Error handling bid:", error);
+    res.sendStatus(500);
+  }
+}
+
 module.exports = {
   getAuctionItems,
   createAuctionItem,
   getAuctionItem,
   updateAuctionItem,
   deleteAuctionItem,
+  handleBid,
 };

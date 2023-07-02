@@ -8,6 +8,7 @@ const {
   getAuctionItem,
   updateAuctionItem,
   deleteAuctionItem,
+  handleBid,
 } = require("./controllers");
 const { sequelize } = require("./db");
 
@@ -26,6 +27,7 @@ app.post("/auction-items", createAuctionItem);
 app.get("/auction-items/:itemId", getAuctionItem);
 app.put("/auction-items/:itemId", updateAuctionItem);
 app.delete("/auction-items/:itemId", deleteAuctionItem);
+app.put("/auction-items/:itemId", handleBid);
 
 sequelize.sync();
 
