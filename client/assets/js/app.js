@@ -31,7 +31,7 @@ function createItemCard(item) {
 
   const itemBid = document.createElement("p");
   itemBid.classList.add("item-bid");
-  itemBid.textContent = `Current Bid: ${item.currentbid}`;
+  itemBid.textContent = `Current Bid: ${item.currentBid}`;
   itemDetails.appendChild(itemBid);
 
   const itemTime = document.createElement("p");
