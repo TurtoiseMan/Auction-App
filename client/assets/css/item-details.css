@@ -42,7 +42,7 @@
   justify-content: space-evenly;
 }
 #edit-button {
-  background-color: #04aa6d;
+  background-color: rgb(3, 142, 72);
   color: white;
   padding: 12px 20px;
   margin-inline: 16px;
@@ -73,11 +73,11 @@
 }
 
 #edit-button:hover {
-  background-color: #45a24a;
+  background-color: rgb(44, 181, 112);
 }
 #delete-button:hover {
   background-color: rgb(184, 17, 59);
 }
 #bid-button:hover {
-  background-color: rgb(45, 153, 203);
+  background-color: rgb(51, 193, 214);
 }
