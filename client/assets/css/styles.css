@@ -5,8 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  text-decoration: none;
 }
-
+body {
+  margin-bottom: 20px;
+}
 #item-container {
   display: flex;
   flex-direction: column;
