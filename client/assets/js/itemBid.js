@@ -6,7 +6,7 @@ function handleFormSubmit(event) {
   // const remainingTime = document.getElementById("item-duration").value;
   // const itemDescription = document.getElementById("item-description").value;
   // const itemImageUrl = document.getElementById("item-image").value;
-  const currentBid = document.getElementById("new-bid").value;
+  const bidAmount = document.getElementById("new-bid").value;
   // const editedItem = {
   //   itemName,
   //   startingBid,
@@ -15,7 +15,7 @@ function handleFormSubmit(event) {
   //   itemDescription,
   //   itemImageUrl,
   // };
-  const editedItem = { currentBid };
+  const editedItem = { bidAmount };
 
   // console.log(editedItem);
 
