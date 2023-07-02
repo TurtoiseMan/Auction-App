@@ -23,11 +23,6 @@ function handleFormSubmit(event) {
       .then((response) => {
         if (response.ok) {
           window.location.href = `item-details.html?id=${itemId}`;
-        } else if (response.status === 400) {
-          response.json().then((data) => {
-            //   console.log(data.error);
-            // alert(data.error);
-          });
         } else {
           throw new Error("Request failed");
         }
