@@ -19,13 +19,16 @@ function handleFormSubmit(event) {
 
   // console.log(editedItem);
 
-  fetch(`https://auction-app-cew6.onrender.com/auction-items/${itemId}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(editedItem),
-  })
+  fetch(
+    `https://auction-app-cew6.onrender.com/auction-items/item-bid/${itemId}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editedItem),
+    }
+  )
     .then((response) => {
       if (response.ok) {
         window.location.href = `item-details.html?id=${itemId}`;
