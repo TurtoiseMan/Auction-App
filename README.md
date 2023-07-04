@@ -1,6 +1,7 @@
 # Auction App
-
 ### [Live demo](https://main--teal-churros-0c6ac1.netlify.app/)
+> **Warning**
+First time item fetch may take a long time due to render's free tier limitations. Subsequent requests will take less time.
 
 **Refer to [API documentation](./api/README.md) for relevant explanations regarding the backend.**
 
